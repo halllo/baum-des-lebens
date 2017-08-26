@@ -5,10 +5,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
+import { CircleContainerComponent } from './circle-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CircleContainerComponent
   ],
   imports: [
     BrowserModule,
