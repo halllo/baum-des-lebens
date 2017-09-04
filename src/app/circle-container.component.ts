@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./circle-container.component.css']
 })
 export class CircleContainerComponent {
-  
+  constructor() {
+
+  }
 }

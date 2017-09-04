@@ -6,11 +6,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { CircleContainerComponent } from './circle-container.component';
+import { CircleItemComponent } from './circle-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CircleContainerComponent
+    CircleContainerComponent,
+    CircleItemComponent
   ],
   imports: [
     BrowserModule,
