@@ -1,5 +1,14 @@
 <div class='circle-container'>
 
+  <div *ngFor="let ringindicator of ringindicators" class="circle-ring"
+    [ngStyle]="{ 'width': '' + ringindicator.diameter + 'em', 'height': '' + ringindicator.diameter + 'em', 'margin': '' + ringindicator.bordermargin + 'em' }">  
+  </div>
+
+  <p *ngFor="let ringindicator of ringindicators" class="circle-ring-label" 
+    [ngStyle]="{ 'transform': 'rotate(315deg) translate(' + ringindicator.labeldistance + 'em) rotate(-315deg) translate(-1em,-1em) rotate(45deg)' }">
+    <span>{{ringindicator.label}}</span>
+  </p>
+
   <ng-content></ng-content>
   
 </div>

@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'circle-item',
   templateUrl: './circle-item.component.html',
-  styleUrls: ['./circle-item.component.css'],
-  inputs: ['angle', 'distance', 'image']
+  styleUrls: ['./circle-item.component.css']
 })
 export class CircleItemComponent {
-  private angle: number;
-  private distance: number;
-  private image: string;
+  @Input() private angle: number;
+  @Input() year: number;
+  @Input() private image: string;
+  
+  private _distance: number = 12;
+  public get distance() { return this._distance; }
+  public set distance(value) { 
+    this._distance = value;
+    this.cdRef.detectChanges();
+  };
 
-  constructor() {
+  constructor(private cdRef:ChangeDetectorRef) {
   }
 }
