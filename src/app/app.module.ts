@@ -6,13 +6,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { CircleContainerComponent } from './circle-container.component';
-import { CircleItemComponent } from './circle-item.component';
+import { CircleItemDirective } from './circle-item.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CircleContainerComponent,
-    CircleItemComponent
+    CircleItemDirective
   ],
   imports: [
     BrowserModule,

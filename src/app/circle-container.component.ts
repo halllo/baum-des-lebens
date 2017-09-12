@@ -1,5 +1,5 @@
 import { Component, ContentChildren, QueryList, ChangeDetectorRef } from '@angular/core';
-import { CircleItemComponent } from './circle-item.component';
+import { CircleItemDirective } from './circle-item.directive';
 
 @Component({
   selector: 'circle-container',
@@ -7,20 +7,20 @@ import { CircleItemComponent } from './circle-item.component';
   styleUrls: ['./circle-container.component.css']
 })
 export class CircleContainerComponent {
-  @ContentChildren(CircleItemComponent) items: QueryList<CircleItemComponent>;
+  @ContentChildren(CircleItemDirective) items: QueryList<CircleItemDirective>;
   ringindicators: RingIndicator[];
 
   constructor(private cdRef:ChangeDetectorRef) {
   }
 
   ngAfterViewInit() {
-    let circleItms = this.items.filter(item => !!item.year);
-    let years = circleItms.map(item => item.year).filter(onlyUnique).sort();
+    let circleItems = this.items.filter(item => !!item.year);
+    let years = circleItems.map(item => item.year).filter(onlyUnique).sort();
     let rings = years.map((year, index) => new RingIndicator(year, index, years.length));
     this.ringindicators = rings;
     this.cdRef.detectChanges();
 
-    for (let item of circleItms) {
+    for (let item of circleItems) {
       let ring = this.ringindicators.find(ring => ring.label == item.year);
       item.distance = ring.itemdistance;
     }
