@@ -7,7 +7,6 @@ export class CircleItemDirective {
 
     constructor(private el: ElementRef, private cdRef:ChangeDetectorRef) {
        el.nativeElement.style.display = 'block';
-       el.nativeElement.style.overflow = 'hidden';
        el.nativeElement.style.position = 'absolute';
        el.nativeElement.style.top = '50%';
        el.nativeElement.style.left = '50%';

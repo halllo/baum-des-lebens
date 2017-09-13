@@ -1,0 +1,28 @@
+a[circle-item] {
+	width: 4em; height: 4em;
+	margin: -2em; /* 2em = 4em/2 */ /* half the width */
+}
+a[circle-item] img { display: block; width: 100%; }
+
+
+
+.speech-bubble {
+	position: relative;
+	background: #A8F199;
+	border-radius: .4em;
+	padding: 0.5em;
+	transform: translate(-50%, -100%) translate(0px, -10px);
+}
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-top-color: #A8F199;
+	border-bottom: 0;
+	margin-left: -11px;
+	margin-bottom: -11px;
+}
