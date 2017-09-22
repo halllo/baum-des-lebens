@@ -2,6 +2,7 @@
  * Position icons into circle (SO)
  * http://stackoverflow.com/q/12813573/1397351 
  */
+
  .circle-container {
 	position: relative;
 	width: 70em;
@@ -9,19 +10,23 @@
 	border: dashed 1px;
 	border-radius: 50%;
 	margin: 0 auto 0;
+	background-image: url('/assets/img/tree.png');
+	background-repeat: no-repeat;
+	background-size: 70em;
+	background-position: center;
 }
 
 .circle-ring {
 	display: block;
 	position: absolute;
-	border: dashed 0.4px darkgray;
+	border: dashed 0.4px rgba(169, 169, 169, 0.5);
 	border-radius: 50%;
 }
 .circle-ring-label {
 	display: block;
 	overflow: hidden;
 	position: absolute;
-	color: darkgray;
+	color: rgba(169, 169, 169, 0.5);
 	top: 50%; left: 50%;
 	width: 4em; height: 4em;
 }
